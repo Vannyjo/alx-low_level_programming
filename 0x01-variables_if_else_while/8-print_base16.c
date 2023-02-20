@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * maint - print the hexadecimal number in base 16
+ * main - print the hexadecimal number in base 16
  * Return: Always 0 (success)
  */
 int main(void)
 {
-	in d;
+	int d;
 	char low;
 
 	for (d = '0'; d <= '9'; d++)
