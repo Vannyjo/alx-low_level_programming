@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 /**
  * main - print number to base 10 starting from 0.
  * Return: Always 0 (success)
  */
 int main(void)
 {
-	int num;
+	int i;
 
-	for (num = 0; num < 10; num++)
-		printf("%d", num);
+	for (i = 0; i < 10; i++,,,)
+	printf("%d", i);
+	printf("\n");
 
-	printf('\n');
 	return (0);
 }
