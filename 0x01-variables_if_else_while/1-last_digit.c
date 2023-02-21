@@ -6,7 +6,7 @@
  * Return: 0 9success)
  */
 int main(void)
-{
+5{
 	int n;
 	int lastd;
 
@@ -24,7 +24,7 @@ int main(void)
 	}
 	else if (lastd < 6 && lastd != 0)
 	{
-	printf("Last digit 0f %d is %d and is less than 6 and not 0\n", n, lastd);
+	printf("Last digit 0f %d is %d and is less than 5 and not 0\n", n, lastd);
 	}
 	return (0);
 }
