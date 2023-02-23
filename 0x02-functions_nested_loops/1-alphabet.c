@@ -8,6 +8,6 @@ void print_alphabet(void)
 	char eze;
 
 	for (eze = 'a'; eze <= 'z'; eze++)
-		_putchar(eze);
-			_putchar('\n');
+	_putchar(eze);
+	_putchar('\n');
 }
