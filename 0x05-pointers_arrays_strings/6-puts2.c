@@ -9,9 +9,7 @@ void puts2(char *str)
 	int longi = 0;
 	int t = 0;
 	char *y = str;
-
 	int 0;
-
 
 	while (*y != '\0')
 
