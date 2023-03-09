@@ -2,6 +2,7 @@
 /**
  * _print_rev_recursion - entry point
  * @: points to string
+ * Return: 0
  */
 void _print_rev_recursion(char *s)
 {
