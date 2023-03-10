@@ -3,7 +3,6 @@
  * factorial - Entry point
  * @n: if n is lower than 0, return -1 else return 0
  * Return: 0
- * Return: 1
  */
 int factorial(int n)
 {
