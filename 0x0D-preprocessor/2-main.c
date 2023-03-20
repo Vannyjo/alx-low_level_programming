@@ -1,4 +1,5 @@
-#include <stlib.h>
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * main - Print file name it was compiled from
  * Return: always 0 success
