@@ -1,14 +1,15 @@
-#include <stdio.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
- * print_listint - F unction of the prototype that prints all the element in the listint_t
- * @**h: h is the pointer that poi nts to the head of the node
- * Return: Always number of the (node)
+ * print_listint - prints all the elements of a listint_t list.
+ *
+ * @h: head of linklist node
+ *
+ * Return: the number of nodes
+ *
  */
-
 size_t print_listint(const listint_t *h)
-
 {
 	size_t count = 0;
 
