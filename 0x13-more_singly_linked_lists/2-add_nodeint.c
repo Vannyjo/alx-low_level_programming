@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <stringe>
 /**
   * add_nodeint - A prototype function that adds node at beginning of a listint_t list.
   *
