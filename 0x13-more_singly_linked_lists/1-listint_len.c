@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <string.h>
-
 /**
  * listint_len -is the function prototype  Counts the number of elements in a linked listint_t list.
  *
