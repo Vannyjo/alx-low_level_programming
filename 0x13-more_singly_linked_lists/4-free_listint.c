@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * free_listint - frees a listint_t list
+ * free_listint - a function prototype that frees a listint_t list
  *
- * @head: the head of the list
+ * @head: the head of the list that is to be freed
  *
  * Return: NULL if error
  */
