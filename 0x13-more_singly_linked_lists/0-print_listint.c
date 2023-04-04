@@ -14,10 +14,9 @@ size_t print_listint(const listint_t *h)
 	size_t count = 0;
 
 	if (h == NULL)
+		
+	while (h != NULL)
 
-		printf("The node is empty");
-
-	else if	(h != NULL)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
