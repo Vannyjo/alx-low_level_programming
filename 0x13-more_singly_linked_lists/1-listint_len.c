@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * listint_len - the function prototype that counts the number of elements in a linked listint_t list.
+ * listint_len - the number of elements in a linked listint_t list.
  *
- * @h: head pointer that points to nthe start of the node
+ * @h: head pointer
  *
  * Return: the number of elements
  *
