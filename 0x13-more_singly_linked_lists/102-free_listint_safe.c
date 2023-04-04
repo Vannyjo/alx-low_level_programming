@@ -39,7 +39,7 @@ size_t free_listint_safe(listint_t **head)
 {
 	size_t i, num = 0;
 	listint_t **list = NULL;
-	listint_t *nextNode;
+	listint_t *next;
 
 	if (head == NULL || *head == NULL)
 		return (num);
@@ -56,9 +56,9 @@ size_t free_listint_safe(listint_t **head)
 		}
 		num++;
 		list = _ra(list, num, *head);
-		nextNode = (*head)->nextNode;
+		next = (*head)->next;
 		free(*head);
-		*head = nextNode;
+		*head = next;
 	}
 	free(list);
 	return (num);
