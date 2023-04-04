@@ -2,21 +2,21 @@
 #include <stdlib.h>
 
 /**
- * free_listint - a function that  frees a listint_t list
+ * free_listint - frees a listint_t list
  *
- * @head: A node that started the linked list
+ * @head: the head of the list
  *
  * Return: NULL if error
  */
 
 void free_listint(listint_t *head)
 {
-	listint_t *nextNode;
+	listint_t *next;
 
 	while (head != NULL)
 	{
-		nextNode = head->nextNode;
+		next = head->next;
 		free(head);
-		head = nextNode;
+		head = next;
 	}
 }
