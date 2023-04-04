@@ -2,21 +2,21 @@
 #include <stdlib.h>
 
 /**
- * pop_listint - deletes the head node
- * @head: a double pointer
+ * pop_listint - a function prototype that deletes the head node in the linked list
+ * @head: a pointer that points to another pointer
  *
  *Return: empty
  */
 int pop_listint(listint_t **head)
 {
-	listint_t *start;
+	listint_t *startNode;
 	int n;
 
 	if (head == NULL || *head == NULL)
 		return (0);
-	start = *head;
-	*head = start->next;
-	n = start->n;
-	free(start);
+	startNode = *head;
+	*head = startNode->next;
+	n = startNode->n;
+	free(startNode);
 	return (n);
 }
