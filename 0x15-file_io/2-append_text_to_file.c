@@ -1,39 +1,41 @@
 #include "main.h"
 
 /**
- * append_text_to_file - Appends text to the end of a file
- * @filename: The name of the file
- * @text_content: The NULL terminated string to add at the end of the file
+ * _strlen - finds the length of a string
+ * @str: pointer to the string
+ *
+ * Return: length of the string
+ */
+size_t _strlen(char *str)
+{
+	size_t append;
+
+	for (append = 0; str[append]; append++)
+		;
+	return (append);
+}
+
+/**
+ * append_text_to_file - appends a text at the end of a file.
+ * @filename: name of the file
+ * @text_content: NULL terminated string to add at the end of the file
  *
  * Return: 1 on success and -1 on failure
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	FILE *fp;
-	int status = 0;
-	struct stat st;
+	int fp;
+	ssize_t len;
 
 	if (filename == NULL)
 		return (-1);
-
-	if (stat(filename, &st) == 0)
-	{
-		fp = fopen(filename, "a");
-		if (fp == NULL)
-		{
-			perror("Error opening file");
-			return (-1);
-		}
-		if (text_content != NULL)
-			status = fputs(text_content, fp);
-		if (status < 0)
-		{
-			perror("Error writing to file");
-			fclose(fp);
-			return (-1);
-		}
-		fclose(fp);
-		return (1);
-	}
-	return (-1);
+	fp = open(filename, O_WRONLY | O_APPEND);
+	if (fp == -1)
+		return (-1);
+	if (text_content != NULL)
+		len = write(fd, text_content, _strlen(text_content));
+	close(fp);
+	if (len == -1)
+		return (-1);
+	return (1);
 }
