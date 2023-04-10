@@ -11,7 +11,6 @@ size_t _strlen(char *str)
 	size_t append;
 
 	for (append = 0; str[append]; append++)
-		;
 	return (append);
 }
 
