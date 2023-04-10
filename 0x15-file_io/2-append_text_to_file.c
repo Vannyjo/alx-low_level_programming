@@ -7,33 +7,35 @@
  *
  * Return: 1 on success and -1 on failure
  */
+
 int append_text_to_file(const char *filename, char *text_content)
 {
-	FILE *fp;
-	int status = 0;
-	struct stat st;
+    int fd, bytes_written, len = 0;
 
-	if (filename == NULL)
-		return (-1);
+    if (filename == NULL)
+        return (-1);
 
-	if (stat(filename, &st) == 0)
-	{
-		fp = fopen(filename, "a");
-		if (fp == NULL)
-		{
-			perror("Error opening file");
-			return (-1);
-		}
-		if (text_content != NULL)
-			status = fputs(text_content, fp);
-		if (status < 0)
-		{
-			perror("Error writing to file");
-			fclose(fp);
-			return (-1);
-		}
-		fclose(fp);
-		return (1);
-	}
-	return (-1);
+    fd = open(filename, O_WRONLY | O_APPEND);
+    if (fd == -1)
+        return (-1);
+
+    if (text_content == NULL)
+    {
+        close(fd);
+        return (1);
+    }
+
+    while (text_content[len])
+        len++;
+
+    bytes_written = write(fd, text_content, len);
+    if (bytes_written == -1)
+    {
+        close(fd);
+        return (-1);
+    }
+
+    close(fd);
+
+    return (1);
 }
